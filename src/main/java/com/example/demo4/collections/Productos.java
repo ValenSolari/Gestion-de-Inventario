@@ -1,18 +1,23 @@
 package com.example.demo4.collections;
 
 import com.example.demo4.Clases.Product;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableArray;
+import javafx.collections.ObservableList;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 
 public class Productos {
-    private ArrayList<Product> productos;
+    //private ArrayList<Product> productos;
+    private ObservableList<Product> productos;
 
     public Productos() {
-        this.productos = new ArrayList<>();
+        this.productos = FXCollections.observableArrayList();
+        //this.productos = new ArrayList<>();
     }
 
-    public Productos(ArrayList<Product> productos) {
+    public Productos(ObservableList<Product> productos) {
         this.productos = productos;
     }
     public void ordenarPorNombre(){
@@ -54,11 +59,13 @@ public class Productos {
         }
     }
 
-    public ArrayList<Product> getProductos() {
+
+
+    public ObservableList<Product> getProductos() {
         return productos;
     }
 
-    public void setProductos(ArrayList<Product> productos) {
+    public void setProductos(ObservableList<Product> productos) {
         this.productos = productos;
     }
 

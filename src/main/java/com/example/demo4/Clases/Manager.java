@@ -2,6 +2,7 @@ package com.example.demo4.Clases;
 
 import com.example.demo4.collections.Productos;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -20,7 +21,23 @@ public final class Manager {
             e.getStackTrace();
         }
     }
-    public static void agregarProducto(Product product){productos.agregarProducto(product);}
+    public static   void saveToFile(String path,ArrayList<Product> products){
+        ObjectMapper mapper=new ObjectMapper();
+        try {
+            File file=new File(path);
+            mapper.enable(SerializationFeature.INDENT_OUTPUT);
+            // Boolean result=file.createNewFile();
+            mapper.writeValue(file,products);
+        } catch (IOException e) {
+            e.getStackTrace();
+        }
+    }
+    public static void agregarProducto(Product product){
+        Manager.productos.agregarProducto(product);
+        //Manager.productos.mostrarProd();
+        System.out.println(Manager.getProductos().getProductos().toString());
+       // saveToFile("productos.json",Manager.getProductos().getProductos());
+    }
 
     public static void agregarPersona(Persona persona){
         personas.add(persona);
@@ -35,7 +52,7 @@ public final class Manager {
         } catch (IOException e)
         {
             e.printStackTrace();
-            return null;
+            return new ArrayList<>();
         }
 
     }
