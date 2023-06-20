@@ -33,8 +33,8 @@ public class AgregarPersonaController {
         {
            Empleado empleado =new Empleado(txt_dni.getText(),txtNombre.getText(),txt_apellido.getText(),Integer.parseInt(txt_edad.getText())
                    ,txt_direccion.getText(),txt_email.getText(),Integer.parseInt(txt_salario.getText()),0,menupickerRol.getValue(),datePicker.getValue().toString());
-            Manager.agregarEmpleado(empleado);
-            Manager.saveToFile("empleados.json",Manager.getEmpleados().getList());
+            Manager.getInstance().agregarEmpleado(empleado);
+            Manager.saveToFile("empleados.json",Manager.getInstance().getEmpleados().getList());
             closeForm();
         }
 

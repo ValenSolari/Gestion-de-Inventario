@@ -6,4 +6,5 @@ import java.util.ArrayList;
 
 public interface DatosBuscador<T> {
     ObservableList<T> buscar(String dato);
+
 }

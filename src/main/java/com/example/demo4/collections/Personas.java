@@ -2,12 +2,13 @@ package com.example.demo4.collections;
 
 
 import com.example.demo4.Clases.Persona;
+import com.example.demo4.ui.DatosBuscador;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import java.util.ArrayList;
 
-public class Personas <T extends Persona>{
+public class Personas <T extends Persona> implements DatosBuscador {
     private ObservableList<T> list;
 
     public Personas() {
@@ -41,6 +42,25 @@ public class Personas <T extends Persona>{
 
     public void setList(ObservableList<T> list) {
         this.list = list;
+    }
+
+    @Override
+    public ObservableList<T> buscar(String dato) {
+        ObservableList<T> result=FXCollections.observableArrayList();
+        for (T t:list
+        ) {
+            if (t.getNombre().toLowerCase().contains(dato.toLowerCase())
+                    ||t.getDni().toLowerCase().contains(dato.toLowerCase())||
+                    t.getEmail().toLowerCase().contains(dato.toLowerCase())||
+                    t.getApellido().toLowerCase().contains(dato.toLowerCase())){
+                result.add(t);
+            }
+        }
+       /* if(result.isEmpty())
+        {
+            result.setAll(getList());
+        }*/
+        return result;
     }
 /*
     public ArrayList<Persona> toList(){
