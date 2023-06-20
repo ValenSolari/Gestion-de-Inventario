@@ -1,6 +1,7 @@
 package com.example.demo4.collections;
 
 import com.example.demo4.Clases.Product;
+import com.example.demo4.ui.DatosBuscador;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableArray;
 import javafx.collections.ObservableList;
@@ -8,7 +9,7 @@ import javafx.collections.ObservableList;
 import java.util.ArrayList;
 import java.util.Comparator;
 
-public class Productos {
+public class Productos implements DatosBuscador<Product> {
     //private ArrayList<Product> productos;
     private ObservableList<Product> productos;
 
@@ -38,6 +39,7 @@ public class Productos {
         productos.sort(Comparator.comparing(Product::getGanancia));
 
     }
+    //public ArrayList<Product>buscarPor
     public void agregarProducto(Product product){
         productos.add(product);
       /* ObjectMapper mapper=new ObjectMapper();
@@ -74,5 +76,19 @@ public class Productos {
         return "Productos{" +
                 "productos=" + productos.toString() +
                 '}';
+    }
+
+    @Override
+    public ObservableList<Product> buscar(String dato) {
+        ObservableList<Product> result=FXCollections.observableArrayList();
+        for (Product p:productos
+             ) {
+            if (p.getNombre().toLowerCase().contains(dato.toLowerCase())
+                    ||p.getMarca().toLowerCase().contains(dato.toLowerCase())||
+                    p.getCategoria().toString().toLowerCase().contains(dato.toLowerCase())){
+                result.add(p);
+            }
+        }
+        return result;
     }
 }

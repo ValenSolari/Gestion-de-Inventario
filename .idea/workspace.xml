@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5aa25f7a-c62d-4da6-a9d6-7dc077c5be5a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/clientes.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/ui/DatosBuscador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/Clases/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/Clases/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/Clases/Pedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/Clases/Pedido.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/collections/Pedidos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/collections/Pedidos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/collections/Personas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/collections/Personas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/ui/AgregarPersonaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/ui/AgregarPersonaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/collections/Productos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/collections/Productos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/ui/MenuUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/ui/MenuUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo4/ui/MenuUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo4/ui/MenuUI.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,9 +21,9 @@
       <list>
         <option value="JavaFXApplication" />
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -59,7 +57,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "ProductCode",
+    "git-widget-placeholder": "Pedidos",
     "ignore.virus.scanning.warn.message": "true",
     "last_directory_selection": "C:/Users/Win10/IdeaProjects/GestionTpFInal/src/main/java/com/example/demo4/ui",
     "last_opened_file_path": "C:/Users/Win10/IdeaProjects/GestionTpFInal/src/main/resources/com/example/demo4",
