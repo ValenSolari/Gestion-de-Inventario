@@ -3,14 +3,12 @@ package com.example.demo4.ui;
 import com.example.demo4.Clases.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ListChangeListener;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
-import javafx.scene.control.MenuItem;
-import javafx.scene.control.SplitMenuButton;
+import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.scene.text.Font;
 import javafx.stage.Modality;
@@ -43,6 +41,8 @@ public class MenuUI {
     private ListView<Product> listViewProd;
     @FXML
     private ListView<Persona> listViewPers;
+    @FXML
+    private TextField buscadorProd,buscadorPers;
 
 
     //salesLabel,personLabel;
@@ -122,6 +122,7 @@ public class MenuUI {
 
         cargarListViewProd();
         cargarListViewPers();
+        buscador(buscadorProd,Manager.getProductos(),listViewProd);
 
         splitMenuButton.setOnAction(e-> splitMenuButton.show());
         agregarEmpleado.setOnAction(e->onAddPersonButton("agregar-empleado.fxml","Agregar empleado"));
@@ -153,5 +154,13 @@ public class MenuUI {
         listViewPers.getItems().setAll(Manager.getClientes().getList());
         listViewPers.setCellFactory(param->new ListItemPersAdapter());
         listViewPers.setFocusTraversable(false);
+    }
+
+    private <T>void buscador(TextField field,DatosBuscador<T> buscador,ListView<T> listView){
+        ObservableList<T> datos=FXCollections.observableArrayList();
+        field.textProperty().addListener((observable, oldValue, newValue) -> {
+            listView.setItems(buscador.buscar(newValue));
+        });
+        listViewProd.setFocusTraversable(false);
     }
 }
