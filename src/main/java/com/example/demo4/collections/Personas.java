@@ -20,7 +20,7 @@ public class Personas <T extends Persona>{
     public Persona buscarItemDNI(String dni){
         return list.stream().filter(p->p.getDni().equals(dni)).findFirst().get();
     }
-    public ArrayList<Persona> buscarItemsNombre(String nombre){
+    public ArrayList<T> buscarItemsNombre(String nombre){
        /* ArrayList<Persona> match=new ArrayList<>();
         for (Map.Entry<String,Persona> entry: personas.entrySet()){
             if(entry.getValue().getNombre().contains(nombre)){
