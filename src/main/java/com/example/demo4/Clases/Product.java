@@ -1,11 +1,8 @@
 package com.example.demo4.Clases;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import javafx.collections.ObservableArray;
 
-import java.time.LocalDate;
-
-public class Product{
+public class Product {
     private String nombre; //jamon 1kg
     private String fechaIngreso;
     private String marca;

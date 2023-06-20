@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo4.AgregarProductoController">
+<AnchorPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo4.ui.AgregarProductoController">
             <children>
                <GridPane layoutY="41.0" prefHeight="368.0" prefWidth="318.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                  <columnConstraints>
@@ -47,7 +47,7 @@
                      <TextField fx:id="txt_stock" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                      <DatePicker fx:id="datePicker" GridPane.columnIndex="1" GridPane.rowIndex="6" />
                      <TextArea fx:id="txtDescription" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                     <Button onAction="#onClickButtonAdd" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="18.0" prefWidth="93.0" styleClass="agregar-button" stylesheets="@styles.css" text="Agregar" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="8">
+                     <Button onAction="#onClickButtonAdd" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="18.0" prefWidth="93.0" styleClass="agregar-button" stylesheets="@../styles.css" text="Agregar" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="8">
                         <GridPane.margin>
                            <Insets right="80.0" />
                         </GridPane.margin>

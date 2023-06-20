@@ -69,5 +69,10 @@ public class Productos {
         this.productos = productos;
     }
 
-
+    @Override
+    public String toString() {
+        return "Productos{" +
+                "productos=" + productos.toString() +
+                '}';
+    }
 }

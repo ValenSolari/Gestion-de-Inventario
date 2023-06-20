@@ -1,10 +1,9 @@
-package com.example.demo4;
+package com.example.demo4.ui;
 
 import com.example.demo4.Clases.CategoriasProductos;
 import com.example.demo4.Clases.Manager;
 import com.example.demo4.Clases.Product;
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;

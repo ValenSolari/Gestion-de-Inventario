@@ -1,16 +1,17 @@
-package com.example.demo4;
+package com.example.demo4.ui;
 
 import com.example.demo4.Clases.Product;
+import com.example.demo4.ui.ListItemProdController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.ListCell;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 
-public class CustomListItem extends ListCell<Product> {
+public class ListItemProdAdapter extends ListCell<Product> {
     private ListItemProdController controller;
     AnchorPane root;
-    public CustomListItem() {
+    public ListItemProdAdapter() {
         try {
             FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource("list-item-prod.fxml"));
             controller = new ListItemProdController();

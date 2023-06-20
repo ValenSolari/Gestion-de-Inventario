@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="150.0" prefWidth="656.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo4.ListItemProdController">
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="150.0" prefWidth="656.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo4.ui.ListItemProdController">
    <children>
       <Label fx:id="nombre" layoutX="168.0" prefHeight="27.0" prefWidth="422.0" text="Nombre" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
          <font>
@@ -80,13 +80,13 @@
       </GridPane>
       <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="6.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <image>
-            <Image url="@product-icon.jpg" />
+            <Image url="@../product-icon.jpg" />
          </image></ImageView>
       <Button layoutX="611.0" layoutY="115.0" mnemonicParsing="false" text="Editar" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="10.0">
           <font>
               <Font name="SansSerif" size="12.0" />
           </font></Button>
-      <Label fx:id="descripcion" layoutX="166.0" layoutY="75.0" prefHeight="57.0" prefWidth="311.0" text="Descripcion" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="170.0">
+      <Label fx:id="descripcion" layoutX="195.0" layoutY="75.0" prefHeight="58.0" prefWidth="286.0" text="Descripcion" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="195.0">
           <font>
               <Font name="SansSerif" size="12.0" />
           </font></Label>
