@@ -38,8 +38,8 @@ public class AgregarProductoController {
         Product product=new Product(txtNombre.getText(),datePicker.getValue().toString(),txt_marca.getText(),menupickerCategory.getValue(),
                 Integer.parseInt(txt_costo.getText()),Integer.parseInt(txt_venta.getText()),Integer.parseInt(txt_stock.getText()),
                 txtDescription.getText());
-        Manager.agregarProducto(product);
-        Manager.saveToFile("productos.json",Manager.getProductos().getProductos());
+        Manager.getInstance().agregarProducto(product);
+        Manager.saveToFile("productos.json",Manager.getInstance().getProductos().getProductos());
         closeForm();
     }
 

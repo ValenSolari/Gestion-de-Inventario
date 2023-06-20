@@ -15,8 +15,10 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
-public class MenuUI {
+public class MenuUI{
     private Label labelSelected;
     private static final Font FONT_ITEM_SELECTED=new Font("SansSerif",18);
     private static final Font FONT_ITEM_UNSELECTED=new Font("SansSerif",14);
@@ -122,20 +124,22 @@ public class MenuUI {
 
         cargarListViewProd();
         cargarListViewPers();
-        buscador(buscadorProd,Manager.getProductos(),listViewProd);
+        buscador(buscadorProd,Manager.getInstance().getProductos(),listViewProd);
+        buscador(buscadorPers,Manager.getInstance(),listViewPers);
+        //buscador(buscadorPers,Manager.getEmpleados(),listViewPers);
 
         splitMenuButton.setOnAction(e-> splitMenuButton.show());
         agregarEmpleado.setOnAction(e->onAddPersonButton("agregar-empleado.fxml","Agregar empleado"));
         agregarCliente.setOnAction(e->onAddPersonButton("agregar-cliente.fxml","Agregar cliente"));
         Parent parent=homeLabel.getParent();
 
-        Manager.getEmpleados().getList().addListener(new ListChangeListener<Empleado>() {
+        Manager.getInstance().getEmpleados().getList().addListener(new ListChangeListener<Empleado>() {
             @Override
             public void onChanged(Change<? extends Empleado> change) {
                 cargarListViewPers();
             }
         });
-        Manager.getClientes().getList().addListener(new ListChangeListener<Cliente>() {
+        Manager.getInstance().getClientes().getList().addListener(new ListChangeListener<Cliente>() {
             @Override
             public void onChanged(Change<? extends Cliente> change) {
                 cargarListViewPers();
@@ -144,20 +148,19 @@ public class MenuUI {
     }
 
     private void cargarListViewProd(){
-        listViewProd.setItems(Manager.getProductos().getProductos());
+        listViewProd.setItems(Manager.getInstance().getProductos().getProductos());
         listViewProd.setCellFactory(param->new ListItemProdAdapter());
         listViewProd.setFocusTraversable(false);
     }
     private void cargarListViewPers(){
-
-        listViewPers.getItems().setAll(Manager.getEmpleados().getList());
-        listViewPers.getItems().setAll(Manager.getClientes().getList());
+        listViewPers.getItems().clear();
+        listViewPers.getItems().addAll(Manager.getInstance().getClientes().getList());
+        listViewPers.getItems().addAll(Manager.getInstance().getEmpleados().getList());
         listViewPers.setCellFactory(param->new ListItemPersAdapter());
         listViewPers.setFocusTraversable(false);
     }
 
     private <T>void buscador(TextField field,DatosBuscador<T> buscador,ListView<T> listView){
-        ObservableList<T> datos=FXCollections.observableArrayList();
         field.textProperty().addListener((observable, oldValue, newValue) -> {
             listView.setItems(buscador.buscar(newValue));
         });

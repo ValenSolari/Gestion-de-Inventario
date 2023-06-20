@@ -2,17 +2,29 @@ package com.example.demo4.Clases;
 
 import com.example.demo4.collections.Personas;
 import com.example.demo4.collections.Productos;
+import com.example.demo4.ui.DatosBuscador;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXMLLoader;
 
 import java.io.*;
 import java.util.ArrayList;
 
-public final class Manager {
-    private static Productos productos=new Productos();
-    private static Personas<Empleado> empleados=new Personas<>();
-    private static Personas<Cliente> clientes=new Personas<>();
+public final class Manager implements DatosBuscador<Persona> {
 
+    private static Manager manager;
+    private  Productos productos=new Productos();
+    private  Personas<Empleado> empleados=new Personas<>();
+    private  Personas<Cliente> clientes=new Personas<>();
+    private Manager(){}
+    public static Manager getInstance(){
+        if(manager==null){
+          return manager=new Manager();
+        }
+        return manager;
+    }
     public  static <T> void saveToFile(String path,T t){
         ObjectMapper mapper=new ObjectMapper();
         try {
@@ -23,7 +35,7 @@ public final class Manager {
             e.getStackTrace();
         }
     }
-    public static void saveToFile(String path,ArrayList<Product> products){
+    public void saveToFile(String path,ArrayList<Product> products){
         ObjectMapper mapper=new ObjectMapper();
         try {
             File file=new File(path);
@@ -34,17 +46,17 @@ public final class Manager {
             e.getStackTrace();
         }
     }
-    public static void agregarProducto(Product product){
-        Manager.productos.agregarProducto(product);
+    public void agregarProducto(Product product){
+        productos.agregarProducto(product);
         //Manager.productos.mostrarProd();
-        System.out.println(Manager.getProductos().getProductos().toString());
+        System.out.println(getProductos().getProductos().toString());
        // saveToFile("productos.json",Manager.getProductos().getProductos());
     }
 
-    public static void agregarEmpleado(Empleado empleado){
+    public  void agregarEmpleado(Empleado empleado){
         empleados.agregarItem(empleado);
     }
-    public static void agregarCliente(Cliente cliente){
+    public  void agregarCliente(Cliente cliente){
         clientes.agregarItem(cliente);
     }
     public static <T> ArrayList<T> fileToList(String path, Class<T> t){
@@ -59,28 +71,60 @@ public final class Manager {
             return new ArrayList<>();
         }
     }
+    public  ObservableList<Persona> clientesYEmpleados(){
+        ObservableList list= FXCollections.observableArrayList();
+        list.setAll(getClientes().getList());
+        list.setAll(getEmpleados().getList());
+        return list;
+    }
 
-    public static Personas<Empleado> getEmpleados() {
+    public  Personas<Empleado> getEmpleados() {
         return empleados;
     }
 
-    public static void setEmpleados(Personas<Empleado> empleados) {
-        Manager.empleados = empleados;
+    public  void setEmpleados(Personas<Empleado> empleados) {
+        empleados = empleados;
     }
 
-    public static Personas<Cliente> getClientes() {
+    public  Personas<Cliente> getClientes() {
         return clientes;
     }
 
-    public static void setClientes(Personas<Cliente> clientes) {
-        Manager.clientes = clientes;
+    public  void setClientes(Personas<Cliente> clientes) {
+        clientes = clientes;
     }
 
-    public static Productos getProductos() {
+    public  Productos getProductos() {
         return productos;
     }
 
-    public static void setProductos(Productos productos) {
-        Manager.productos = productos;
+    public  void setProductos(Productos productos) {
+        productos = productos;
+    }
+
+    @Override
+    public  ObservableList<Persona> buscar(String dato) {
+        ObservableList<Persona> result = FXCollections.observableArrayList();
+        for (Persona t : getEmpleados().getList()
+        ) {
+            if (t.getNombre().concat(" "+t.getApellido()).toLowerCase().contains(dato.toLowerCase())
+                    || t.getDni().toLowerCase().contains(dato.toLowerCase()) ||
+                    t.getEmail().toLowerCase().contains(dato.toLowerCase()) ||
+                    t.getApellido().toLowerCase().contains(dato.toLowerCase())
+                    ||"empleados".contains(dato.toLowerCase())) {
+                result.add(t);
+            }
+        }
+        for (Persona t : getClientes().getList()
+        ) {
+            if (t.getNombre().concat(" "+t.getApellido()).toLowerCase().contains(dato.toLowerCase())
+                    || t.getDni().toLowerCase().contains(dato.toLowerCase()) ||
+                    t.getEmail().toLowerCase().contains(dato.toLowerCase()) ||
+                    t.getApellido().toLowerCase().contains(dato.toLowerCase())
+                    ||"clientes".contains(dato.toLowerCase())) {
+                result.add(t);
+            }
+        }
+        return result;
     }
 }

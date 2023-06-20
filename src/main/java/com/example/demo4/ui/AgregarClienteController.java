@@ -29,8 +29,8 @@ public class AgregarClienteController {
     {
         Cliente cliente =new Cliente(txt_dni.getText(),txtNombre.getText(),txt_apellido.getText(),Integer.parseInt(txt_edad.getText())
                 ,txt_direccion.getText(),txt_email.getText(),new ArrayList<>(),0,true);
-        Manager.agregarCliente(cliente);
-        Manager.saveToFile("clientes.json",Manager.getClientes().getList());
+        Manager.getInstance().agregarCliente(cliente);
+        Manager.saveToFile("clientes.json",Manager.getInstance().getClientes().getList());
         closeForm();
     }
 }
