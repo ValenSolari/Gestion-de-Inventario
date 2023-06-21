@@ -4,6 +4,8 @@ import com.example.demo4.Clases.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -34,7 +36,9 @@ public class MenuUI{
     @FXML
     private SplitMenuButton splitMenuButton;
     @FXML
-    private MenuItem agregarCliente,agregarEmpleado;
+    private Button agregarPed;
+    @FXML
+    private MenuItem agregarCliente,agregarEmpleado,menuItemNombre,agregarPedProd;
     private static final String COLOR_SELECTED="#ADCFA3";
     private static final String COLOR_UNSELECTED="#91BF9D";
     @FXML
@@ -44,9 +48,12 @@ public class MenuUI{
     @FXML
     private ListView<Persona> listViewPers;
     @FXML
+    private ListView<Pedido> listViewPed;
+    @FXML
     private TextField buscadorProd,buscadorPers;
 
-
+    ListItemProdAdapter adapter;
+    ListCell<Product>list;
     //salesLabel,personLabel;
     public MenuUI() {
         //changeLabelSelected(homeLabel);
@@ -57,18 +64,18 @@ public class MenuUI{
 
     @FXML
     protected void onProductBottonClick(){
-        showPanel(2);
+        showPanel(1);
         changeSelection(productLabel,productPane);
 
     }
     @FXML
     protected void onPersonButtonClick(){
-        showPanel(3);
+        showPanel(2);
         changeSelection(personLabel,personPane);
     }
     @FXML
     protected void onSalesButtonClick(){
-        showPanel(4);
+        showPanel(3);
         changeSelection(salesLabel,salesPane);
     }
     @FXML
@@ -83,8 +90,11 @@ public class MenuUI{
             stage.showAndWait();
         }catch (IOException e){e.printStackTrace();}
 
+        //adapter.changeMostrarAgregarProd(listViewProd);
+
     }
-    public void onAddPersonButton(String path,String title) {
+    public void addButton(String path,String title) {
+
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(path));
         try {
             Scene scene = new Scene(fxmlLoader.load());
@@ -93,13 +103,9 @@ public class MenuUI{
             stage.setScene(scene);
             stage.setTitle(title);
             stage.showAndWait();
-        }catch (IOException e){e.printStackTrace();}
-
-    }
-    @FXML
-    protected void onInicioCLick(){
-        showPanel(1);
-        changeSelection(homeLabel,homePane);
+        }catch (IOException e) {
+            e.printStackTrace();
+        }
     }
     private void changeSelection(Label selection,Pane pane){
         paneSelected.setStyle("-fx-background-color: "+MenuUI.COLOR_UNSELECTED+";");
@@ -117,21 +123,23 @@ public class MenuUI{
 
     public void initialize() {
 
-        labelSelected=homeLabel;
-
-        paneSelected=homePane;
-        changeSelection(homeLabel,homePane);
+        labelSelected=productLabel;
+        paneSelected=productPane;
+        changeSelection(labelSelected,paneSelected);
 
         cargarListViewProd();
         cargarListViewPers();
+        cargarListViewPed();
         buscador(buscadorProd,Manager.getInstance().getProductos(),listViewProd);
         buscador(buscadorPers,Manager.getInstance(),listViewPers);
         //buscador(buscadorPers,Manager.getEmpleados(),listViewPers);
 
         splitMenuButton.setOnAction(e-> splitMenuButton.show());
-        agregarEmpleado.setOnAction(e->onAddPersonButton("agregar-empleado.fxml","Agregar empleado"));
-        agregarCliente.setOnAction(e->onAddPersonButton("agregar-cliente.fxml","Agregar cliente"));
-        Parent parent=homeLabel.getParent();
+        agregarEmpleado.setOnAction(e->addButton("agregar-empleado.fxml","Agregar empleado"));
+        agregarCliente.setOnAction(e->addButton("agregar-cliente.fxml","Agregar cliente"));
+        agregarPed.setOnAction(e->addButton("agregar-pedido.fxml","Agregar pedido"));
+        agregarPedProd.setOnAction(e->addButton("agregar-pedido.fxml","Agregar pedido"));
+        Parent parent=salesLabel.getParent();
 
         Manager.getInstance().getEmpleados().getList().addListener(new ListChangeListener<Empleado>() {
             @Override
@@ -145,6 +153,17 @@ public class MenuUI{
                 cargarListViewPers();
             }
         });
+
+        menuItemNombre.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                Manager.getInstance().getProductos().ordenarPorNombre();
+                cargarListViewProd();
+                System.out.println("holaa");
+            }
+        });
+        list=listViewProd.getCellFactory().call(listViewProd);
+         adapter=(ListItemProdAdapter) list;
     }
 
     private void cargarListViewProd(){
@@ -152,6 +171,12 @@ public class MenuUI{
         listViewProd.setCellFactory(param->new ListItemProdAdapter());
         listViewProd.setFocusTraversable(false);
     }
+    private void cargarListViewPed(){
+        listViewPed.setItems(Manager.getInstance().getPedidos().getPedidos());
+        listViewPed.setCellFactory(param->new ListItemPedAdapter());
+        listViewPed.setFocusTraversable(false);
+    }
+
     private void cargarListViewPers(){
         listViewPers.getItems().clear();
         listViewPers.getItems().addAll(Manager.getInstance().getClientes().getList());
@@ -166,4 +191,5 @@ public class MenuUI{
         });
         listViewProd.setFocusTraversable(false);
     }
+
 }

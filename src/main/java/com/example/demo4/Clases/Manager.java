@@ -1,5 +1,6 @@
 package com.example.demo4.Clases;
 
+import com.example.demo4.collections.Pedidos;
 import com.example.demo4.collections.Personas;
 import com.example.demo4.collections.Productos;
 import com.example.demo4.ui.DatosBuscador;
@@ -15,6 +16,7 @@ import java.util.ArrayList;
 public final class Manager implements DatosBuscador<Persona> {
 
     private static Manager manager;
+    private Pedidos pedidos=new Pedidos();
     private  Productos productos=new Productos();
     private  Personas<Empleado> empleados=new Personas<>();
     private  Personas<Cliente> clientes=new Personas<>();
@@ -108,6 +110,25 @@ public final class Manager implements DatosBuscador<Persona> {
         }
         return result;
     }
+    public void agregarPedido(Pedido pedido){
+        pedidos.agregarPedido(pedido);
+        clientes.buscarItemDNI(pedido.getDniCliente()).agregarPedido(pedido.getId());
+    }
+
+    public Integer generarIdProd()
+    {
+        return getProductos().getProductos().size();
+    }
+    public Integer generarIdPed()
+    {
+        return getPedidos().getPedidos().size();
+    }
+    public void salvarDatos(){
+        Manager.saveToFile("clientes.json",Manager.getInstance().getClientes().getList());
+        Manager.saveToFile("empleados.json",Manager.getInstance().getEmpleados().getList());
+        Manager.saveToFile("productos.json",Manager.getInstance().getProductos().getProductos());
+        Manager.saveToFile("pedidos.json",Manager.getInstance().getPedidos().getPedidos());
+    }
 
     ///endregion
 
@@ -136,6 +157,13 @@ public final class Manager implements DatosBuscador<Persona> {
         productos = productos;
     }
 
+    public Pedidos getPedidos() {
+        return pedidos;
+    }
+
+    public void setPedidos(Pedidos pedidos) {
+        this.pedidos = pedidos;
+    }
     ///endregion
 
 

@@ -6,8 +6,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableArray;
 import javafx.collections.ObservableList;
 
-import java.util.ArrayList;
-import java.util.Comparator;
+import java.util.*;
 
 public class Productos implements DatosBuscador<Product> {
     //private ArrayList<Product> productos;
@@ -42,6 +41,25 @@ public class Productos implements DatosBuscador<Product> {
     public void ordenarPorGanancia(){
         productos.sort(Comparator.comparing(Product::getGanancia));
 
+    }
+    public Product buscarPorId(Integer id){
+        for (Product p:productos
+             ) {
+            if (Objects.equals(p.getId(), id)){
+                return p;
+            }
+        }
+        return null;
+    }
+
+    public Integer obtenerValor(HashMap<Integer, Integer> map){
+        Integer result=0;
+        for (Map.Entry<Integer,Integer> p: map.entrySet()
+             ) {
+            result+=buscarPorId(p.getKey()).getPrecioDeVenta()*p.getValue();
+
+        }
+        return result;
     }
 
     public void agregarProducto(Product product){

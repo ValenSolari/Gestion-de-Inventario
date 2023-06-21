@@ -3,6 +3,7 @@ package com.example.demo4.Clases;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 public class Product {
+    private Integer id;
     private String nombre;
     private String fechaIngreso;
     private String marca;
@@ -18,6 +19,7 @@ public class Product {
 
     public Product(String nombre, String fechaIngreso, String marca, CategoriasProductos categoria,
                    Integer precioCompra, Integer porcentajeDeVenta, Integer stock, String descripcion) {
+        this.id=Manager.getInstance().generarIdProd();
         this.nombre = nombre;
         this.fechaIngreso = fechaIngreso;
         this.marca = marca;
@@ -124,6 +126,13 @@ public class Product {
         return precioDeVenta-precioCompra;
     }
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
     ///endregion
 
     ///region Metodos

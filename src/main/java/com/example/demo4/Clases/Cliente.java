@@ -58,5 +58,10 @@ public class Cliente extends Persona {
                 "} " + super.toString();
     }
 
+    public void agregarPedido(Integer id)
+    {
+        pedidosId.add(id);
+    }
+
     ///endregion
 }

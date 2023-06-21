@@ -48,5 +48,30 @@ public class Pedidos {
 
     ///region Get and Set
 
+    public ObservableList<Pedido> getPedidos() {
+        return pedidos;
+    }
+
+    public void setPedidos(ObservableList<Pedido> pedidos) {
+        this.pedidos = pedidos;
+    }
+
+    public Integer getValorTotal() {
+        return valorTotal;
+    }
+
+    public void setValorTotal(Integer valorTotal) {
+        this.valorTotal = valorTotal;
+    }
+
+    public Integer getCostoTotal() {
+        return costoTotal;
+    }
+
+    public void setCostoTotal(Integer costoTotal) {
+        this.costoTotal = costoTotal;
+    }
+
+
     ///endregion
 }
