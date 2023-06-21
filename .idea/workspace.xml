@@ -8,14 +8,19 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clientes.json" beforeDir="false" afterPath="$PROJECT_DIR$/clientes.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empleados.json" beforeDir="false" afterPath="$PROJECT_DIR$/empleados.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productos.json" beforeDir="false" afterPath="$PROJECT_DIR$/productos.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/Clases/CategoriasProductos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/Clases/CategoriasProductos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/Clases/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/Clases/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/Clases/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/Clases/Empleado.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/Clases/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/Clases/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/Clases/Pedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/Clases/Pedido.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/Clases/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/Clases/Persona.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/Clases/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/Clases/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/collections/Pedidos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/collections/Pedidos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/collections/Personas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/collections/Personas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/ui/AgregarClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/ui/AgregarClienteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/ui/AgregarPersonaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/ui/AgregarPersonaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/ui/AgregarProductoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/ui/AgregarProductoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/ui/DatosBuscador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/ui/DatosBuscador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/collections/Productos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/collections/Productos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/ui/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/ui/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/ui/MenuUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/ui/MenuUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/ui/ListItemPersAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/ui/ListItemPersAdapter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +33,8 @@
         <option value="JavaFXApplication" />
         <option value="Enum" />
         <option value="Class" />
-        <option value="FxmlFile" />
         <option value="Interface" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -66,8 +71,8 @@
     "git-widget-placeholder": "Pedidos",
     "ignore.virus.scanning.warn.message": "true",
     "last_directory_selection": "C:/Users/Win10/IdeaProjects/GestionTpFInal/src/main/java/com/example/demo4/ui",
-    "last_opened_file_path": "C:/Users/Win10/IdeaProjects/GestionTpFInal/src/main/resources/com/example/demo4",
-    "project.structure.last.edited": "Modules",
+    "last_opened_file_path": "C:/Users/solar/Desktop/Tp/Gestion-de-Inventario",
+    "project.structure.last.edited": "Global Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.lookFeel"

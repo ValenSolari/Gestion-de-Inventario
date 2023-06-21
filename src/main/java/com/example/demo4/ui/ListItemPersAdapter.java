@@ -33,7 +33,7 @@ public class ListItemPersAdapter extends ListCell<Persona> {
              //Configurar los datos del elemento utilizando el controlador
             controller.setNombre(persona.getNombre()+" "+persona.getApellido());
             controller.setDni(persona.getDni());
-            controller.setEmail(persona.getDni());
+            controller.setEmail(persona.getEmail());
             controller.setDireccion(persona.getDireccion());
             controller.setEdad(persona.getEdad().toString());
             controller.setTipo(persona instanceof Empleado?"Empleado":"Cliente");

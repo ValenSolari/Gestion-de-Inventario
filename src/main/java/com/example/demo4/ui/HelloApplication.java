@@ -13,7 +13,7 @@ import java.util.Objects;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-       // Manager.getProductos().setProductos(Manager.fileToList("productos.json", Product.class));
+        //Manager.getProductos().setProductos(Manager.fileToList("productos.json", Product.class));
         Manager.getInstance().getProductos().setProductos(FXCollections.observableList(Objects.requireNonNull(Manager.fileToList("productos.json", Product.class))));
         Manager.getInstance().getEmpleados().setList(FXCollections.observableList(Objects.requireNonNull(Manager.fileToList("empleados.json", Empleado.class))));
         Manager.getInstance().getClientes().setList(FXCollections.observableList(Objects.requireNonNull(Manager.fileToList("clientes.json", Cliente.class))));

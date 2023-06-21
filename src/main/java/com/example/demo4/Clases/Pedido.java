@@ -10,6 +10,8 @@ public class Pedido {
     private String  dniCliente;
     private String metodoDePago;
 
+    ///region Constructor
+
     public Pedido(ArrayList<Product> products, String fecha, String valor, String dniCliente, String metodoDePago) {
         this.products = products;
         this.fecha = fecha;
@@ -18,6 +20,11 @@ public class Pedido {
         this.metodoDePago = metodoDePago;
     }
 
+    public Pedido() {
+    }
+    ///endregion
+
+    ///region Get and Set
     public Integer getId() {
         return id;
     }
@@ -65,4 +72,23 @@ public class Pedido {
     public void setMetodoDePago(String metodoDePago) {
         this.metodoDePago = metodoDePago;
     }
+    ///endregion
+
+    ///region Metodos
+
+
+    @Override
+    public String toString() {
+        return "Pedido{" +
+                "id=" + id +
+                ", products=" + products +
+                ", fecha='" + fecha + '\'' +
+                ", valor='" + valor + '\'' +
+                ", dniCliente='" + dniCliente + '\'' +
+                ", metodoDePago='" + metodoDePago + '\'' +
+                '}';
+    }
+
+
+    ///endregion
 }

@@ -7,6 +7,8 @@ public class Cliente extends Persona {
     private Integer saldo;
     private Boolean activo;
 
+    ///region Constructor
+
     public Cliente(String dni, String nombre, String apellido, Integer edad, String direccion, String email,
                    ArrayList<Integer> pedidos, Integer saldo, Boolean activo) {
         super(dni, nombre, apellido, edad, direccion, email);
@@ -17,7 +19,9 @@ public class Cliente extends Persona {
 
     public Cliente() {
     }
+    ///endregion
 
+    ///region Get and Set
     public ArrayList<Integer> getPedidosId() {
         return pedidosId;
     }
@@ -41,4 +45,18 @@ public class Cliente extends Persona {
     public void setActivo(Boolean activo) {
         this.activo = activo;
     }
+    ///endregion
+
+    ///region Metodos
+
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "pedidosId=" + pedidosId +
+                ", saldo=" + saldo +
+                ", activo=" + activo +
+                "} " + super.toString();
+    }
+
+    ///endregion
 }

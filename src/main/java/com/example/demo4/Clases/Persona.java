@@ -8,6 +8,8 @@ public class Persona {
     private String direccion;
     private String email;
 
+    ///region Constructor
+
     public Persona() {
     }
 
@@ -20,6 +22,9 @@ public class Persona {
         this.email = email;
     }
 
+    ///endregion
+
+    ///region Get and set
     public String getDni() {
         return dni;
     }
@@ -67,5 +72,22 @@ public class Persona {
     public void setEmail(String email) {
         this.email = email;
     }
+    ///endregion
+
+    ///region Metodos
+
+    @Override
+    public String toString() {
+        return "Persona{" +
+                "dni='" + dni + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", edad=" + edad +
+                ", direccion='" + direccion + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
+
+    ///endregion
 
 }

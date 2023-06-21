@@ -11,10 +11,14 @@ import java.util.ArrayList;
 public class Personas <T extends Persona> implements DatosBuscador {
     private ObservableList<T> list;
 
+    ///region Constructor
+
     public Personas() {
         this.list = FXCollections.observableArrayList();
     }
+    ///endregion
 
+    ///region Metodos
     public void agregarItem(T t){
         list.add(t);
     }
@@ -40,9 +44,6 @@ public class Personas <T extends Persona> implements DatosBuscador {
         return list;
     }
 
-    public void setList(ObservableList<T> list) {
-        this.list = list;
-    }
 
     @Override
     public ObservableList<T> buscar(String dato) {
@@ -62,6 +63,13 @@ public class Personas <T extends Persona> implements DatosBuscador {
         }*/
         return result;
     }
+    ///endregion
+
+    ///region Get and Set
+    public void setList(ObservableList<T> list) {
+        this.list = list;
+    }
+    ///endregion
 /*
     public ArrayList<Persona> toList(){
         ArrayList<Persona> arrayList=new ArrayList<>();

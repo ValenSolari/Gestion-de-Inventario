@@ -18,6 +18,9 @@ public final class Manager implements DatosBuscador<Persona> {
     private  Productos productos=new Productos();
     private  Personas<Empleado> empleados=new Personas<>();
     private  Personas<Cliente> clientes=new Personas<>();
+
+
+    ///region Constructor
     private Manager(){}
     public static Manager getInstance(){
         if(manager==null){
@@ -25,12 +28,15 @@ public final class Manager implements DatosBuscador<Persona> {
         }
         return manager;
     }
+    ///endregion
+
+    ///region Metodos
     public  static <T> void saveToFile(String path,T t){
         ObjectMapper mapper=new ObjectMapper();
         try {
             File file=new File(path);
            // Boolean result=file.createNewFile();
-            mapper.writeValue(file,t);
+            mapper.writerWithDefaultPrettyPrinter().writeValue(file,t);
         } catch (IOException e) {
             e.getStackTrace();
         }
@@ -41,7 +47,7 @@ public final class Manager implements DatosBuscador<Persona> {
             File file=new File(path);
             mapper.enable(SerializationFeature.INDENT_OUTPUT);
             // Boolean result=file.createNewFile();
-            mapper.writeValue(file,products);
+            mapper.writerWithDefaultPrettyPrinter().writeValue(file,products);
         } catch (IOException e) {
             e.getStackTrace();
         }
@@ -77,31 +83,6 @@ public final class Manager implements DatosBuscador<Persona> {
         list.setAll(getEmpleados().getList());
         return list;
     }
-
-    public  Personas<Empleado> getEmpleados() {
-        return empleados;
-    }
-
-    public  void setEmpleados(Personas<Empleado> empleados) {
-        empleados = empleados;
-    }
-
-    public  Personas<Cliente> getClientes() {
-        return clientes;
-    }
-
-    public  void setClientes(Personas<Cliente> clientes) {
-        clientes = clientes;
-    }
-
-    public  Productos getProductos() {
-        return productos;
-    }
-
-    public  void setProductos(Productos productos) {
-        productos = productos;
-    }
-
     @Override
     public  ObservableList<Persona> buscar(String dato) {
         ObservableList<Persona> result = FXCollections.observableArrayList();
@@ -127,4 +108,35 @@ public final class Manager implements DatosBuscador<Persona> {
         }
         return result;
     }
+
+    ///endregion
+
+    ///region Get and Set
+    public  Personas<Empleado> getEmpleados() {
+        return empleados;
+    }
+
+    public  void setEmpleados(Personas<Empleado> empleados) {
+        empleados = empleados;
+    }
+
+    public  Personas<Cliente> getClientes() {
+        return clientes;
+    }
+
+    public  void setClientes(Personas<Cliente> clientes) {
+        clientes = clientes;
+    }
+
+    public  Productos getProductos() {
+        return productos;
+    }
+
+    public  void setProductos(Productos productos) {
+        productos = productos;
+    }
+
+    ///endregion
+
+
 }

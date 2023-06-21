@@ -1,1 +1,31 @@
-[{"nombre":"Gaseosa Cola","fechaIngreso":"2023-06-08","marca":"Coca cola","categoria":"fiambreria","precioCompra":600,"porcentajeDeVenta":40,"precioDeVenta":840,"stock":10,"descripcion":"Gaseosa coca cola de 2 litros"},{"nombre":"Fernet","fechaIngreso":"2023-06-08","marca":"Branca","categoria":"fiambreria","precioCompra":1500,"porcentajeDeVenta":25,"precioDeVenta":1875,"stock":10,"descripcion":"Fernet Branca Unico 750cc."},{"nombre":"Aceite Girasol","fechaIngreso":"2023-06-08","marca":"Marolio","categoria":"fiambreria","precioCompra":300,"porcentajeDeVenta":100,"precioDeVenta":600,"stock":20,"descripcion":"Aceite girasol Marolio botella de 1L."},{"nombre":"Nuevo","fechaIngreso":"2023-06-08","marca":"nuevo","categoria":"papeleria","precioCompra":1500,"porcentajeDeVenta":12,"precioDeVenta":1680,"stock":2,"descripcion":"dnsjcbdskbkdsn"}]
+[ {
+  "nombre" : "Coca Cola",
+  "fechaIngreso" : "2023-06-20",
+  "marca" : "Coca Cola",
+  "categoria" : "despensa",
+  "precioCompra" : 800,
+  "porcentajeDeVenta" : 10,
+  "precioDeVenta" : 880,
+  "stock" : 20,
+  "descripcion" : "Coca Cola de 1,5 lts"
+}, {
+  "nombre" : "Queso",
+  "fechaIngreso" : "2023-06-20",
+  "marca" : "La serenisima",
+  "categoria" : "fiambreria",
+  "precioCompra" : 800,
+  "porcentajeDeVenta" : 20,
+  "precioDeVenta" : 960,
+  "stock" : 50,
+  "descripcion" : "Queso de maquina de la serenisima"
+}, {
+  "nombre" : "Fertnet",
+  "fechaIngreso" : "2023-06-20",
+  "marca" : "Fertnet Branca",
+  "categoria" : "despensa",
+  "precioCompra" : 1200,
+  "porcentajeDeVenta" : 40,
+  "precioDeVenta" : 1680,
+  "stock" : 50,
+  "descripcion" : "Fertnet Branca de 1,5 lts"
+} ]

@@ -12,12 +12,16 @@ public class Pedidos {
     private Integer valorTotal;
     private Integer costoTotal;
 
+    ///region Construcor
+
     public Pedidos() {
         this.pedidos= FXCollections.observableArrayList();
         this.valorTotal=0;
         this.costoTotal=0;
     }
+    ///endregion
 
+    ///region Metodos
     public void agregarPedido(Pedido pedido){
         pedidos.add(pedido);
     }
@@ -40,4 +44,9 @@ public class Pedidos {
         cliente.getPedidosId().forEach(id->result.add(buscarPorId(id)));
         return result;
     }
+    ///endregion
+
+    ///region Get and Set
+
+    ///endregion
 }

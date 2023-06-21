@@ -1,1 +1,23 @@
-[{"dni":"444444","nombre":"jeronimo","apellido":"f","edad":20,"direccion":"vdvdv","email":"fdvdfbf","salario":1000,"horasDeTrabajo":0,"rol":"Encargado","fechaContratacion":"2023-06-09"}]
+[ {
+  "dni" : "444444",
+  "nombre" : "jeronimo",
+  "apellido" : "f",
+  "edad" : 20,
+  "direccion" : "vdvdv",
+  "email" : "fdvdfbf",
+  "salario" : 1000,
+  "horasDeTrabajo" : 0,
+  "rol" : "Encargado",
+  "fechaContratacion" : "2023-06-09"
+}, {
+  "dni" : "44859000",
+  "nombre" : "valentin",
+  "apellido" : "solari",
+  "edad" : 28,
+  "direccion" : "dirreccion",
+  "email" : "email",
+  "salario" : 2500,
+  "horasDeTrabajo" : 0,
+  "rol" : "Vendedor",
+  "fechaContratacion" : "2023-06-20"
+} ]

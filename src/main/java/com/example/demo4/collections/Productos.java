@@ -13,6 +13,7 @@ public class Productos implements DatosBuscador<Product> {
     //private ArrayList<Product> productos;
     private ObservableList<Product> productos;
 
+    ///region Constructor
     public Productos() {
         this.productos = FXCollections.observableArrayList();
         //this.productos = new ArrayList<>();
@@ -21,6 +22,9 @@ public class Productos implements DatosBuscador<Product> {
     public Productos(ObservableList<Product> productos) {
         this.productos = productos;
     }
+    ///endregion
+
+    ///region Metodos
     public void ordenarPorNombre(){
         productos.sort(Comparator.comparing(Product::getNombre));
     }
@@ -39,7 +43,7 @@ public class Productos implements DatosBuscador<Product> {
         productos.sort(Comparator.comparing(Product::getGanancia));
 
     }
-    //public ArrayList<Product>buscarPor
+
     public void agregarProducto(Product product){
         productos.add(product);
       /* ObjectMapper mapper=new ObjectMapper();
@@ -67,9 +71,7 @@ public class Productos implements DatosBuscador<Product> {
         return productos;
     }
 
-    public void setProductos(ObservableList<Product> productos) {
-        this.productos = productos;
-    }
+
 
     @Override
     public String toString() {
@@ -91,4 +93,13 @@ public class Productos implements DatosBuscador<Product> {
         }
         return result;
     }
+
+    ///endregion
+
+    ///region Get and Set
+    public void setProductos(ObservableList<Product> productos) {
+        this.productos = productos;
+    }
+
+    ///endregion
 }

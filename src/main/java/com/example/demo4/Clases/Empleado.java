@@ -6,6 +6,8 @@ public class Empleado extends Persona {
     private Rol rol;
     private String fechaContratacion;
 
+    ///region Constructor
+
     public Empleado(String dni, String nombre, String apellido, Integer edad, String direccion, String email,
                     Integer salario, Integer horasDeTrabajo, Rol rol, String fechaContratacion) {
         super(dni, nombre, apellido, edad, direccion, email);
@@ -17,6 +19,9 @@ public class Empleado extends Persona {
 
     public Empleado() {
     }
+    ///endregion
+
+    ///region Get and set
 
     public Integer getSalario() {
         return salario;
@@ -49,4 +54,18 @@ public class Empleado extends Persona {
     public void setFechaContratacion(String fechaContratacion) {
         this.fechaContratacion = fechaContratacion;
     }
+    ///endregion
+
+    ///region Metodos
+    @Override
+    public String toString() {
+        return "Empleado{" +
+                "salario=" + salario +
+                ", horasDeTrabajo=" + horasDeTrabajo +
+                ", rol=" + rol +
+                ", fechaContratacion='" + fechaContratacion + '\'' +
+                "} " + super.toString();
+    }
+
+    ///endregion
 }
