@@ -97,7 +97,7 @@
         </rowConstraints>
          <children>
             <Spinner fx:id="spinnerCantidad" editable="true" prefHeight="16.0" prefWidth="83.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Agregar" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Editar" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                 <font>
                     <Font name="SansSerif" size="12.0" />
                 </font>
