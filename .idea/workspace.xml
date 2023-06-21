@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5aa25f7a-c62d-4da6-a9d6-7dc077c5be5a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientes.json" beforeDir="false" afterPath="$PROJECT_DIR$/clientes.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empleados.json" beforeDir="false" afterPath="$PROJECT_DIR$/empleados.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productos.json" beforeDir="false" afterPath="$PROJECT_DIR$/productos.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/Clases/CategoriasProductos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/Clases/CategoriasProductos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/Clases/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/Clases/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/Clases/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/Clases/Empleado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/Clases/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/Clases/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/Clases/Pedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/Clases/Pedido.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/Clases/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/Clases/Persona.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/Clases/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/Clases/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/collections/Pedidos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/collections/Pedidos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/collections/Personas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/collections/Personas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/collections/Productos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/collections/Productos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/ui/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/ui/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/ui/ListItemPersAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/ui/ListItemPersAdapter.java" afterDir="false" />
-    </list>
+    <list default="true" id="5aa25f7a-c62d-4da6-a9d6-7dc077c5be5a" name="Changes" comment="21:48" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -162,12 +145,20 @@
       <option name="project" value="LOCAL" />
       <updated>1687273659518</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="21:48">
+      <created>1687308576186</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1687308576186</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Base" />
-    <option name="LAST_COMMIT_MESSAGE" value="Base" />
+    <MESSAGE value="21:48" />
+    <option name="LAST_COMMIT_MESSAGE" value="21:48" />
   </component>
 </project>
