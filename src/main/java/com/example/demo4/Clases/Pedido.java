@@ -1,19 +1,24 @@
 package com.example.demo4.Clases;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Pedido {
     private Integer id;
-    private ArrayList<Product> products;
+    private HashMap<Integer, Integer> productsId;
     private String fecha;
-    private String valor;
+    private Integer valor;
     private String  dniCliente;
     private String metodoDePago;
 
     ///region Constructor
 
-    public Pedido(ArrayList<Product> products, String fecha, String valor, String dniCliente, String metodoDePago) {
-        this.products = products;
+    public Pedido(HashMap<Integer, Integer> products, String fecha, Integer valor, String dniCliente, String metodoDePago) {
+        this.id=Manager.getInstance().generarIdPed();
+        this.productsId = products;
         this.fecha = fecha;
         this.valor = valor;
         this.dniCliente = dniCliente;
@@ -33,12 +38,12 @@ public class Pedido {
         this.id = id;
     }
 
-    public ArrayList<Product> getProducts() {
-        return products;
+    public HashMap<Integer, Integer> getProducts() {
+        return productsId;
     }
 
-    public void setProducts(ArrayList<Product> products) {
-        this.products = products;
+    public void setProducts(HashMap<Integer, Integer> products) {
+        this.productsId = products;
     }
 
     public String getFecha() {
@@ -49,11 +54,11 @@ public class Pedido {
         this.fecha = fecha;
     }
 
-    public String getValor() {
+    public Integer getValor() {
         return valor;
     }
 
-    public void setValor(String valor) {
+    public void setValor(Integer valor) {
         this.valor = valor;
     }
 
@@ -76,12 +81,20 @@ public class Pedido {
 
     ///region Metodos
 
-
+    @JsonIgnore
+    public Integer getCantidadProd()
+    {
+        Integer result=0;
+        for (Map.Entry<Integer,Integer> p: productsId.entrySet()) {
+            result+=p.getValue();
+        }
+        return result;
+    }
     @Override
     public String toString() {
         return "Pedido{" +
                 "id=" + id +
-                ", products=" + products +
+                ", products=" + productsId +
                 ", fecha='" + fecha + '\'' +
                 ", valor='" + valor + '\'' +
                 ", dniCliente='" + dniCliente + '\'' +

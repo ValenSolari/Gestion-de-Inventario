@@ -22,7 +22,7 @@ public class Personas <T extends Persona> implements DatosBuscador {
     public void agregarItem(T t){
         list.add(t);
     }
-    public Persona buscarItemDNI(String dni){
+    public T buscarItemDNI(String dni){
         return list.stream().filter(p->p.getDni().equals(dni)).findFirst().get();
     }
     public ArrayList<T> buscarItemsNombre(String nombre){

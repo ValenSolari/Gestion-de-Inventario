@@ -1,31 +1,23 @@
 [ {
-  "nombre" : "Coca Cola",
-  "fechaIngreso" : "2023-06-20",
+  "id" : 0,
+  "nombre" : "Gaseosa Cola",
+  "fechaIngreso" : "2023-06-08",
   "marca" : "Coca Cola",
   "categoria" : "despensa",
-  "precioCompra" : 800,
-  "porcentajeDeVenta" : 10,
-  "precioDeVenta" : 880,
+  "precioCompra" : 450,
+  "porcentajeDeVenta" : 50,
+  "precioDeVenta" : 675,
   "stock" : 20,
-  "descripcion" : "Coca Cola de 1,5 lts"
+  "descripcion" : "Gaseosa cola marca Coca Cola de 3L"
 }, {
-  "nombre" : "Queso",
-  "fechaIngreso" : "2023-06-20",
-  "marca" : "La serenisima",
-  "categoria" : "fiambreria",
-  "precioCompra" : 800,
-  "porcentajeDeVenta" : 20,
-  "precioDeVenta" : 960,
-  "stock" : 50,
-  "descripcion" : "Queso de maquina de la serenisima"
-}, {
-  "nombre" : "Fertnet",
-  "fechaIngreso" : "2023-06-20",
-  "marca" : "Fertnet Branca",
+  "id" : 1,
+  "nombre" : "Fernet",
+  "fechaIngreso" : "2023-06-03",
+  "marca" : "Branca",
   "categoria" : "despensa",
-  "precioCompra" : 1200,
+  "precioCompra" : 1500,
   "porcentajeDeVenta" : 40,
-  "precioDeVenta" : 1680,
-  "stock" : 50,
-  "descripcion" : "Fertnet Branca de 1,5 lts"
+  "precioDeVenta" : 2100,
+  "stock" : 10,
+  "descripcion" : "Fernet Branca de 750cc"
 } ]

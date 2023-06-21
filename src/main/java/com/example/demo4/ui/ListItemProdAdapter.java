@@ -4,6 +4,7 @@ import com.example.demo4.Clases.Product;
 import com.example.demo4.ui.ListItemProdController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.ListCell;
+import javafx.scene.control.ListView;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
@@ -11,6 +12,7 @@ import java.io.IOException;
 public class ListItemProdAdapter extends ListCell<Product> {
     private ListItemProdController controller;
     AnchorPane root;
+    private Boolean mostrarAgregarProd=Boolean.FALSE;
     public ListItemProdAdapter() {
         try {
             FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource("list-item-prod.fxml"));
@@ -38,9 +40,19 @@ public class ListItemProdAdapter extends ListCell<Product> {
             controller.setFecha(product.getFechaIngreso());
             controller.setStock(product.getStock().toString());
             controller.setDescripcion(product.getDescripcion());
+            controller.setCantidadStock(product.getStock());
+            if(mostrarAgregarProd){
+                controller.getSpinnerCantidad().visibleProperty().set(true);
+            }else {
+                controller.getSpinnerCantidad().visibleProperty().set(false);
+            }
 
             setText(null);
             setGraphic(root);
         }
+    }
+    public <T>void changeMostrarAgregarProd(ListView<T> listView){
+        mostrarAgregarProd=!mostrarAgregarProd;
+        System.out.println("hollala: "+mostrarAgregarProd);
     }
 }

@@ -1,7 +1,11 @@
 package com.example.demo4.ui;
 
+import javafx.beans.Observable;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.control.Spinner;
+import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.image.ImageView;
 
 public class ListItemProdController {
@@ -9,9 +13,17 @@ public class ListItemProdController {
     private Label nombre,marca,categora,precioCompra,precioVenta,fecha,stock,descripcion;
     @FXML
     private ImageView imageView;
+    @FXML
+    private Spinner<Integer> spinnerCantidad;
+    private Integer cantidadStock=0;
+    private SpinnerValueFactory<Integer> valueFactory;
+    private ObservableValue<Boolean> agregarPedidoActivo;
+    private Integer cantidadPedida;
+    private Integer idProducto;
+
     public void initialize() {
-        //Image image = new Image("/resources/product-icon.jpg");
-        //imageView.setImage(image);
+
+
     }
 
     public void setNombre(String nombre) {
@@ -43,5 +55,39 @@ public class ListItemProdController {
 
     public void setDescripcion(String descripcion) {
         this.descripcion.setText(descripcion);
+    }
+
+    public Integer getCantidadStock() {
+        return cantidadStock;
+    }
+
+    public void setCantidadStock(Integer cantidadStock) {
+        this.cantidadStock = cantidadStock;
+        valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(0,cantidadStock,0);
+        spinnerCantidad.setValueFactory(valueFactory);
+    }
+
+    public Spinner<Integer> getSpinnerCantidad() {
+        return spinnerCantidad;
+    }
+
+    public void setSpinnerCantidad(Spinner<Integer> spinnerCantidad) {
+        this.spinnerCantidad = spinnerCantidad;
+    }
+
+    public Integer getCantidadPedida() {
+        return cantidadPedida;
+    }
+
+    public void setCantidadPedida(Integer cantidadPedida) {
+        this.cantidadPedida = cantidadPedida;
+    }
+
+    public Integer getIdProducto() {
+        return idProducto;
+    }
+
+    public void setIdProducto(Integer idProducto) {
+        this.idProducto = idProducto;
     }
 }

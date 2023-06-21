@@ -1,23 +1,12 @@
 [ {
-  "dni" : "444444",
-  "nombre" : "jeronimo",
-  "apellido" : "f",
+  "dni" : "44123456",
+  "nombre" : "Jeronimo",
+  "apellido" : "Chipy",
   "edad" : 20,
-  "direccion" : "vdvdv",
-  "email" : "fdvdfbf",
-  "salario" : 1000,
+  "direccion" : "Mardel",
+  "email" : "tp@gmail.com",
+  "salario" : 1200,
   "horasDeTrabajo" : 0,
   "rol" : "Encargado",
-  "fechaContratacion" : "2023-06-09"
-}, {
-  "dni" : "44859000",
-  "nombre" : "valentin",
-  "apellido" : "solari",
-  "edad" : 28,
-  "direccion" : "dirreccion",
-  "email" : "email",
-  "salario" : 2500,
-  "horasDeTrabajo" : 0,
-  "rol" : "Vendedor",
-  "fechaContratacion" : "2023-06-20"
+  "fechaContratacion" : "2023-06-01"
 } ]

@@ -4,7 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5aa25f7a-c62d-4da6-a9d6-7dc077c5be5a" name="Changes" comment="21:48" />
+    <list default="true" id="5aa25f7a-c62d-4da6-a9d6-7dc077c5be5a" name="Changes" comment="21:48">
+      <change afterPath="$PROJECT_DIR$/pedidos.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/ui/AgregarPedidoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/ui/ListItemPedAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/ui/ListItemPedidoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo4/pngwing.com.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo4/ui/agregar-pedido.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo4/ui/list-item-pedido.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientes.json" beforeDir="false" afterPath="$PROJECT_DIR$/clientes.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empleados.json" beforeDir="false" afterPath="$PROJECT_DIR$/empleados.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productos.json" beforeDir="false" afterPath="$PROJECT_DIR$/productos.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/Clases/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/Clases/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/Clases/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/Clases/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/Clases/Pedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/Clases/Pedido.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/Clases/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/Clases/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/collections/Pedidos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/collections/Pedidos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/collections/Personas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/collections/Personas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/collections/Productos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/collections/Productos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/ui/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/ui/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/ui/ListItemProdAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/ui/ListItemProdAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/ui/ListItemProdController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/ui/ListItemProdController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo4/ui/MenuUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo4/ui/MenuUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo4/ui/MenuUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo4/ui/MenuUI.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo4/ui/list-item-prod.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo4/ui/list-item-prod.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,16 +41,16 @@
       <list>
         <option value="JavaFXApplication" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="Pedidos" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -51,7 +77,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Pedidos",
+    "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "last_directory_selection": "C:/Users/Win10/IdeaProjects/GestionTpFInal/src/main/java/com/example/demo4/ui",
     "last_opened_file_path": "C:/Users/solar/Desktop/Tp/Gestion-de-Inventario",
@@ -80,8 +106,8 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="HelloApplication" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.demo4.ui.HelloApplication" />
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.demo4.ui.Main" />
       <module name="demo4" />
       <method v="2">
         <option name="Make" enabled="true" />
