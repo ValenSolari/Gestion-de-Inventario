@@ -38,7 +38,7 @@ public class MenuUI{
     @FXML
     private Button agregarPed;
     @FXML
-    private MenuItem agregarCliente,agregarEmpleado,menuItemNombre,agregarPedProd;
+    private MenuItem agregarCliente,agregarEmpleado,menuItemNombre,agregarPedProd,agregarProd;
     private static final String COLOR_SELECTED="#ADCFA3";
     private static final String COLOR_UNSELECTED="#91BF9D";
     @FXML
@@ -80,7 +80,7 @@ public class MenuUI{
     }
     @FXML
     protected void onAddProductButton() {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("agregar-producto.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/agregar-producto.fxml"));
         try {
             Scene scene = new Scene(fxmlLoader.load());
             Stage stage = new Stage();
@@ -139,6 +139,7 @@ public class MenuUI{
         agregarCliente.setOnAction(e->addButton("agregar-cliente.fxml","Agregar cliente"));
         agregarPed.setOnAction(e->addButton("agregar-pedido.fxml","Agregar pedido"));
         agregarPedProd.setOnAction(e->addButton("agregar-pedido.fxml","Agregar pedido"));
+        agregarProd.setOnAction(e->addButton("agregar-producto.fxml","Agregar producto"));
         Parent parent=salesLabel.getParent();
 
         Manager.getInstance().getEmpleados().getList().addListener(new ListChangeListener<Empleado>() {

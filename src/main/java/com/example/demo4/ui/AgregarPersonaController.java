@@ -19,6 +19,9 @@ public class AgregarPersonaController {
         @FXML
         private ChoiceBox<Rol> menupickerRol;
 
+
+
+
         @FXML
         public void initialize(){
             menupickerRol.setItems(FXCollections.observableList(Arrays.stream(Rol.values()).toList()));
@@ -31,11 +34,20 @@ public class AgregarPersonaController {
         }
         public void onClickButtonAdd()
         {
-           Empleado empleado =new Empleado(txt_dni.getText(),txtNombre.getText(),txt_apellido.getText(),Integer.parseInt(txt_edad.getText())
-                   ,txt_direccion.getText(),txt_email.getText(),Integer.parseInt(txt_salario.getText()),0,menupickerRol.getValue(),datePicker.getValue().toString());
-            Manager.getInstance().agregarEmpleado(empleado);
-            Manager.saveToFile("empleados.json",Manager.getInstance().getEmpleados().getList());
-            closeForm();
+            try {
+                Empleado empleado = new Empleado(txt_dni.getText(), txtNombre.getText(), txt_apellido.getText(), Integer.parseInt(txt_edad.getText())
+                        , txt_direccion.getText(), txt_email.getText(), Integer.parseInt(txt_salario.getText()), 0, menupickerRol.getValue(), datePicker.getValue().toString());
+                Manager.getInstance().agregarEmpleado(empleado);
+                Manager.saveToFile("empleados.json", Manager.getInstance().getEmpleados().getList());
+                closeForm();
+            }catch (NumberFormatException castException){
+                castException.printStackTrace();
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Error");
+                alert.setHeaderText("Datos incorrectos");
+
+                alert.showAndWait();
+            }
         }
 
 

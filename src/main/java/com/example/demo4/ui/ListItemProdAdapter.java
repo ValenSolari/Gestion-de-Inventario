@@ -46,6 +46,7 @@ public class ListItemProdAdapter extends ListCell<Product> {
             }else {
                 controller.getSpinnerCantidad().visibleProperty().set(false);
             }
+            //controller.setProduct(product);
 
             setText(null);
             setGraphic(root);

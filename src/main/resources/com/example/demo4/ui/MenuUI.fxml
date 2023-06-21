@@ -88,7 +88,7 @@
                         </MenuButton>
                         <SplitMenuButton fx:id="splitMenuButton2" mnemonicParsing="false" prefHeight="18.0" prefWidth="89.0" text="Agregar" GridPane.columnIndex="2">
                            <items>
-                              <MenuItem fx:id="agregarProducto" mnemonicParsing="false" onAction="#onAddProductButton" text="Agregar producto" />
+                              <MenuItem fx:id="agregarProd" mnemonicParsing="false"  text="Agregar producto" />
                               <MenuItem fx:id="agregarPedProd" mnemonicParsing="false"  text="Agregar pedido" />
                            </items>
                         </SplitMenuButton>

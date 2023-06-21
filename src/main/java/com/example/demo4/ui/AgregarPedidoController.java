@@ -47,12 +47,11 @@ public class AgregarPedidoController {
                 alert.showAndWait();
 
             }
+            else{
+                alert("Error","ID incorrecto");
+            }
         }catch (NumberFormatException castException){
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Error");
-            alert.setHeaderText("Id incorrecto");
-
-            alert.showAndWait();
+            alert("Error","Id incorrecto");
         }
     }
 
@@ -63,16 +62,20 @@ public class AgregarPedidoController {
             Manager.saveToFile("pedidos.json",Manager.getInstance().getPedidos().getPedidos());
 
         }catch (ClassCastException castException){
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Error");
-            alert.setHeaderText("Datos incorrectos");
-
-            alert.showAndWait();
+            alert("Error","Datos incorrectos");
         }
     }
     public void closeForm(){
         Stage stage= (Stage) cancel.getScene().getWindow();
         stage.close();
+    }
+
+    public void alert(String titulo,String mensaje){
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(titulo);
+        alert.setHeaderText(mensaje);
+
+        alert.showAndWait();
     }
 
 }
